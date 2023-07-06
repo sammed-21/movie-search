@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
 :root {
-  --primary: #032541;
+  /* --primary: #032541;
+  --secondary: #21d07a;
+  --white: #fff; */
+  --primary: #132029;
   --secondary: #21d07a;
   --white: #fff;
 }
@@ -9,7 +12,11 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0;
-  background-color: #ffffff;
+  /* background-color:#040d13; */
+  background-image: url("../public/movie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
   margin: 0;
 }
 
@@ -18,6 +25,8 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  
 }
 
 @media (min-width: 768px) {
@@ -75,7 +84,11 @@ input:focus {
 
 /* Header Styles */
 header {
+  /* background-color: red; */
+
   background-color: var(--primary);
+  opacity: 0.8;
+  
 }
 
 header .inner-content {
@@ -83,6 +96,7 @@ header .inner-content {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  
 }
 
 header a {
@@ -122,6 +136,7 @@ header .nav-links li:last-child {
 .add-content {
   padding: 50px 0;
   max-width: 600px;
+  margin-bottom: 10%;
   margin: 0 auto;
 }
 
@@ -129,9 +144,10 @@ header .nav-links li:last-child {
   width: 100%;
   background-color: var(--primary);
   padding: 10px;
+  
   border-radius: 5px;
   border: none;
-  color: var(--white);
+  color: white;
   font-size: 1.25rem;
 }
 
@@ -169,7 +185,7 @@ header .nav-links li:last-child {
 
 .result-card .info .title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: #fff;
   font-weight: 600;
   margin: 0;
 }
@@ -177,7 +193,7 @@ header .nav-links li:last-child {
 .result-card .info .release-date {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--primary);
+  color:#fff;
   margin: 0;
 }
 
@@ -194,7 +210,7 @@ header .nav-links li:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+   
 }
 
 .count-pill {
@@ -208,7 +224,7 @@ header .nav-links li:last-child {
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color:#fff;
   margin: 0;
 }
 
@@ -274,10 +290,11 @@ header .nav-links li:last-child {
   color: #fefefe;
   background-color: transparent;
   border: none;
+  padding-right:10px;
   transition: all 0.3s ease;
   font-size: 1.25rem;
   padding: 5px;
-  margin: 0;
+  margin: 0 ;
 }
 
 .ctrl-btn:hover {
