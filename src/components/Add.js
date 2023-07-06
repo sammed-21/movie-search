@@ -31,7 +31,7 @@ const Add = (movie) => {
             />
           </div>
           {
-            results?.length > 0 && (
+            results.length > 0 && (
               <ul className="results">
                 {results.map((movie)=>(
                   <li key={movie.id}> 
