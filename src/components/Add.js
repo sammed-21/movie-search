@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useRef,useEffect } from "react";
 import ResultCard from './ResultCard'
 const Add = (movie) => {
+  const ref = useRef(null);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const onChange = (e) => {
@@ -18,6 +19,19 @@ const Add = (movie) => {
          }
       });
   };
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.ctrlKey && event.key === '/') {
+        ref.current.focus();
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [ref])
   return (
     <div className="add-page">
       <div className="container">
@@ -26,8 +40,10 @@ const Add = (movie) => {
             <input
               type="text"
               value={query}
+               
+              ref={ref}
               onChange={onChange}
-              placeholder="Search for a movie"
+              placeholder="Search for a movie '  Ctrl  +  / '"
             />
           </div>
           {
