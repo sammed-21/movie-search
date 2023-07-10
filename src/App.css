@@ -307,3 +307,8 @@ header .nav-links li:last-child {
   font-size: 3rem;
   text-align: center;
 }
+@media screen and (min-width:375px){
+  body {
+    min-height: 110vh;
+  }
+}
